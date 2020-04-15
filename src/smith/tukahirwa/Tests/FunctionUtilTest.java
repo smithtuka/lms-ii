@@ -29,7 +29,7 @@ public class FunctionUtilTest {
         assertEquals(1, FunctionUtil.allBooksPerCategory.apply(factory.bookItemList, "Literature"));
 //        Assert.assertEquals(2, FunctionUtil.allBooksPerCategory.apply(factory.bookItemList, "Literature").long());
     }
-
+//
 // Test 2 - to be cleaned up
 //    @Test
 //    public  void topKAuthorsTest() {
