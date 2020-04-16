@@ -9,12 +9,14 @@ import smith.tukahirwa.functions.FunctionUtil;
 
 import java.util.ArrayList;
 
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import static smith.tukahirwa.Tests.Factory.*;
@@ -29,9 +31,9 @@ public class FunctionUtilTest {
     @Before
     public void setup(){
         MockitoAnnotations.initMocks(this);
-
         /*  */
     }
+
 
     @Test
     public  void getBookPerCategoryTest() {
@@ -71,7 +73,25 @@ public class FunctionUtilTest {
         map.put("M-002", "Alice Tukahirwa");
         map.put("M-001", "Smith Tukahirwa");
         assertEquals(map, FunctionUtil.getMemberNotBorrow.apply(memberList));
+
+    @Test//1
+    public  void allBooksPerCategoryTest() {
+        assertEquals(1, FunctionUtil.allBooksPerCategory.apply(factory.bookItemList, "Literature"));
     }
+    @Test//1
+    public  void topKAuthorsTest() {
+        assertEquals(factory.testAuthors, FunctionUtil.topKAuthors.apply(factory.bookItemList, 2));
+    }
+    @Test//1
+    public void  averagePriceTest(){
+        assertEquals(230, FunctionUtil.averagePrice.apply(factory.bookItemList, "Literature"));
+
+    }
+    @Test//1
+    public void stockValueTest(){
+        assertEquals(690, FunctionUtil.stockValue.apply(factory.bookItemList));
+    }
+
 
     @Test
     public void pastDueDateBooksTest() {

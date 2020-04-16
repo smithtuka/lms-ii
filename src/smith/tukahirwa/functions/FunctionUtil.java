@@ -83,8 +83,31 @@ public class FunctionUtil {
 
     // Categories and number of books per category
     public static final Function<List<BookItem>, Map<String, Long>> categoryNumbers =
-            (bList) -> bList.stream()
-                    .collect(Collectors.groupingBy(BookItem::getSubject, Collectors.counting()));
+
+        (bList)-> bList.stream()
+            .collect(Collectors.groupingBy(BookItem::getSubject, Collectors.counting()));
+
+    // total amount of cash in Stocked books
+    public static Function<List<BookItem>, Double> stockValue
+            = (bList) -> bList.stream()
+            .mapToDouble(BookItem::getPrice)
+            .sum();
+
+    // Total number of ReferenceOnly vs CheckOut Books
+    public static Function<List<BookItem>, Map<Boolean, Long>> ReferenceAndCheckOutBooks
+            = (bList) -> bList.stream()
+            .collect(Collectors.partitioningBy(BookItem::getIsReferenceOnly, Collectors.counting()));
+
+    // average price of books in a specific category
+   public static final BiFunction<List<BookItem>, String, Double> averagePrice
+            =(bList, category) -> bList.stream()
+            .filter(b->b.getSubject()==category)
+            .mapToDouble(BookItem::getPrice)
+            .sum();
+
+
+
+
     // get past due date books
     public static final Function<List<BookItem>, List<BookItem>> pastDueDateBooks =
             bookItems -> bookItems.stream()
