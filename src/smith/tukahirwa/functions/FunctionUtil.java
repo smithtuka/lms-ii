@@ -2,16 +2,15 @@ package smith.tukahirwa.functions;
 
 // Total amount in fines
 
-import smith.tukahirwa.core.Author;
-import smith.tukahirwa.core.BookItem;
-import smith.tukahirwa.core.BookStatus;
-import smith.tukahirwa.core.Member;
+import smith.tukahirwa.core.*;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
+
 import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -136,19 +135,24 @@ public class FunctionUtil {
                     .sorted(Comparator.comparing(BookItem::getPublicationDate).reversed())
                     .map(BookItem::getTitle)
                     .collect(Collectors.toList());
-    // total amount of cash in Stocked books
-    public static Function<List<BookItem>, Double> stockValue
-            = (bList) -> bList.stream()
-            .mapToDouble(BookItem::getPrice)
-            .sum();
-    // Total number of ReferenceOnly vs CheckOut Books
-    public static Function<List<BookItem>, Map<Boolean, Long>> ReferenceAndCheckOutBooks
-            = (bList) -> bList.stream()
-            .collect(Collectors.partitioningBy(BookItem::getIsReferenceOnly, Collectors.counting()));
-    // average price of each books in a specific category
-    BiFunction<List<BookItem>, String, Double> averagePrice
-            = (bList, category) -> bList.stream()
-            .filter(b -> b.getSubject() == category)
-            .mapToDouble(BookItem::getPrice)
-            .sum();
+
+     // Query 11: The most frequent borrower
+     public static final Function< List<Member>, Optional<Member>> mostFrequentBorrower
+             = memberList -> memberList.stream()
+             .sorted((m1, m2) -> m2.getTotalBooksCheckedout() - m1.getTotalBooksCheckedout()).findFirst();
+
+     // Query 12: titles that have been borrowed to a specific member
+    public static final Function< List<Member>, List<String>> infoAboutBorrowedBook
+            = memberList -> memberList.stream()
+             .flatMap(m->m.getBookItems().stream())
+             .map(BookItem::getTitle)
+             .collect(Collectors.toList());
+
+    //Query 13: The list of blacklist members
+    public static final Function< List<Member>, List<Member>> blacklistedMember
+            = memberList -> memberList.stream()
+            .filter(m -> m.getStatus().equals(AccountStatus.BLACKLISTED))
+            .collect(Collectors.toList());
+
+
 }
