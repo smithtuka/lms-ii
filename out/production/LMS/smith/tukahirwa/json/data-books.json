@@ -1,0 +1,602 @@
+[
+	{
+		"id": 1,
+		"status": 3,
+		"dateOfMembership": "2016-05-08",
+		"totalBooksCheckout": 5
+	},
+	{
+		"id": 2,
+		"status": 3,
+		"dateOfMembership": "2019-05-06",
+		"totalBooksCheckout": 3
+	},
+	{
+		"id": 3,
+		"status": 5,
+		"dateOfMembership": "2016-11-27",
+		"totalBooksCheckout": 5
+	},
+	{
+		"id": 4,
+		"status": 2,
+		"dateOfMembership": "2016-08-10",
+		"totalBooksCheckout": 4
+	},
+	{
+		"id": 5,
+		"status": 3,
+		"dateOfMembership": "2016-02-05",
+		"totalBooksCheckout": 3
+	},
+	{
+		"id": 6,
+		"status": 4,
+		"dateOfMembership": "2019-09-30",
+		"totalBooksCheckout": 0
+	},
+	{
+		"id": 7,
+		"status": 5,
+		"dateOfMembership": "2017-11-03",
+		"totalBooksCheckout": 5
+	},
+	{
+		"id": 8,
+		"status": 5,
+		"dateOfMembership": "2019-04-30",
+		"totalBooksCheckout": 1
+	},
+	{
+		"id": 9,
+		"status": 5,
+		"dateOfMembership": "2019-05-13",
+		"totalBooksCheckout": 4
+	},
+	{
+		"id": 10,
+		"status": 3,
+		"dateOfMembership": "2016-11-02",
+		"totalBooksCheckout": 1
+	},
+	{
+		"id": 11,
+		"status": 2,
+		"dateOfMembership": "2016-07-29",
+		"totalBooksCheckout": 5
+	},
+	{
+		"id": 12,
+		"status": 4,
+		"dateOfMembership": "2019-03-21",
+		"totalBooksCheckout": 1
+	},
+	{
+		"id": 13,
+		"status": 1,
+		"dateOfMembership": "2017-09-02",
+		"totalBooksCheckout": 0
+	},
+	{
+		"id": 14,
+		"status": 4,
+		"dateOfMembership": "2017-04-12",
+		"totalBooksCheckout": 2
+	},
+	{
+		"id": 15,
+		"status": 2,
+		"dateOfMembership": "2017-07-04",
+		"totalBooksCheckout": 0
+	},
+	{
+		"id": 16,
+		"status": 1,
+		"dateOfMembership": "2016-09-10",
+		"totalBooksCheckout": 3
+	},
+	{
+		"id": 17,
+		"status": 3,
+		"dateOfMembership": "2016-08-27",
+		"totalBooksCheckout": 2
+	},
+	{
+		"id": 18,
+		"status": 1,
+		"dateOfMembership": "2017-06-28",
+		"totalBooksCheckout": 0
+	},
+	{
+		"id": 19,
+		"status": 1,
+		"dateOfMembership": "2017-06-25",
+		"totalBooksCheckout": 1
+	},
+	{
+		"id": 20,
+		"status": 5,
+		"dateOfMembership": "2019-07-15",
+		"totalBooksCheckout": 1
+	},
+	{
+		"id": 21,
+		"status": 5,
+		"dateOfMembership": "2016-07-13",
+		"totalBooksCheckout": 3
+	},
+	{
+		"id": 22,
+		"status": 3,
+		"dateOfMembership": "2019-10-21",
+		"totalBooksCheckout": 5
+	},
+	{
+		"id": 23,
+		"status": 3,
+		"dateOfMembership": "2017-06-07",
+		"totalBooksCheckout": 0
+	},
+	{
+		"id": 24,
+		"status": 4,
+		"dateOfMembership": "2019-01-20",
+		"totalBooksCheckout": 1
+	},
+	{
+		"id": 25,
+		"status": 4,
+		"dateOfMembership": "2018-09-20",
+		"totalBooksCheckout": 2
+	},
+	{
+		"id": 26,
+		"status": 4,
+		"dateOfMembership": "2018-02-07",
+		"totalBooksCheckout": 5
+	},
+	{
+		"id": 27,
+		"status": 4,
+		"dateOfMembership": "2017-04-26",
+		"totalBooksCheckout": 3
+	},
+	{
+		"id": 28,
+		"status": 2,
+		"dateOfMembership": "2019-09-19",
+		"totalBooksCheckout": 1
+	},
+	{
+		"id": 29,
+		"status": 1,
+		"dateOfMembership": "2017-04-09",
+		"totalBooksCheckout": 1
+	},
+	{
+		"id": 30,
+		"status": 1,
+		"dateOfMembership": "2018-07-01",
+		"totalBooksCheckout": 1
+	},
+	{
+		"id": 31,
+		"status": 2,
+		"dateOfMembership": "2016-11-25",
+		"totalBooksCheckout": 2
+	},
+	{
+		"id": 32,
+		"status": 2,
+		"dateOfMembership": "2016-03-27",
+		"totalBooksCheckout": 4
+	},
+	{
+		"id": 33,
+		"status": 3,
+		"dateOfMembership": "2019-12-03",
+		"totalBooksCheckout": 0
+	},
+	{
+		"id": 34,
+		"status": 1,
+		"dateOfMembership": "2017-06-25",
+		"totalBooksCheckout": 2
+	},
+	{
+		"id": 35,
+		"status": 3,
+		"dateOfMembership": "2019-01-20",
+		"totalBooksCheckout": 5
+	},
+	{
+		"id": 36,
+		"status": 5,
+		"dateOfMembership": "2018-09-26",
+		"totalBooksCheckout": 5
+	},
+	{
+		"id": 37,
+		"status": 3,
+		"dateOfMembership": "2017-05-26",
+		"totalBooksCheckout": 0
+	},
+	{
+		"id": 38,
+		"status": 5,
+		"dateOfMembership": "2019-07-27",
+		"totalBooksCheckout": 2
+	},
+	{
+		"id": 39,
+		"status": 2,
+		"dateOfMembership": "2019-05-20",
+		"totalBooksCheckout": 4
+	},
+	{
+		"id": 40,
+		"status": 5,
+		"dateOfMembership": "2017-06-17",
+		"totalBooksCheckout": 0
+	},
+	{
+		"id": 41,
+		"status": 1,
+		"dateOfMembership": "2018-03-28",
+		"totalBooksCheckout": 5
+	},
+	{
+		"id": 42,
+		"status": 4,
+		"dateOfMembership": "2016-08-24",
+		"totalBooksCheckout": 1
+	},
+	{
+		"id": 43,
+		"status": 4,
+		"dateOfMembership": "2019-06-21",
+		"totalBooksCheckout": 4
+	},
+	{
+		"id": 44,
+		"status": 1,
+		"dateOfMembership": "2016-04-04",
+		"totalBooksCheckout": 5
+	},
+	{
+		"id": 45,
+		"status": 5,
+		"dateOfMembership": "2017-10-12",
+		"totalBooksCheckout": 4
+	},
+	{
+		"id": 46,
+		"status": 3,
+		"dateOfMembership": "2018-09-13",
+		"totalBooksCheckout": 4
+	},
+	{
+		"id": 47,
+		"status": 3,
+		"dateOfMembership": "2018-10-25",
+		"totalBooksCheckout": 5
+	},
+	{
+		"id": 48,
+		"status": 4,
+		"dateOfMembership": "2017-10-29",
+		"totalBooksCheckout": 5
+	},
+	{
+		"id": 49,
+		"status": 1,
+		"dateOfMembership": "2019-02-09",
+		"totalBooksCheckout": 3
+	},
+	{
+		"id": 50,
+		"status": 4,
+		"dateOfMembership": "2019-08-31",
+		"totalBooksCheckout": 2
+	},
+	{
+		"id": 51,
+		"status": 2,
+		"dateOfMembership": "2019-09-12",
+		"totalBooksCheckout": 0
+	},
+	{
+		"id": 52,
+		"status": 2,
+		"dateOfMembership": "2017-12-17",
+		"totalBooksCheckout": 3
+	},
+	{
+		"id": 53,
+		"status": 3,
+		"dateOfMembership": "2017-09-01",
+		"totalBooksCheckout": 2
+	},
+	{
+		"id": 54,
+		"status": 3,
+		"dateOfMembership": "2016-02-26",
+		"totalBooksCheckout": 0
+	},
+	{
+		"id": 55,
+		"status": 4,
+		"dateOfMembership": "2017-05-01",
+		"totalBooksCheckout": 2
+	},
+	{
+		"id": 56,
+		"status": 5,
+		"dateOfMembership": "2019-04-05",
+		"totalBooksCheckout": 2
+	},
+	{
+		"id": 57,
+		"status": 3,
+		"dateOfMembership": "2018-12-25",
+		"totalBooksCheckout": 3
+	},
+	{
+		"id": 58,
+		"status": 1,
+		"dateOfMembership": "2017-12-25",
+		"totalBooksCheckout": 3
+	},
+	{
+		"id": 59,
+		"status": 3,
+		"dateOfMembership": "2019-01-17",
+		"totalBooksCheckout": 4
+	},
+	{
+		"id": 60,
+		"status": 5,
+		"dateOfMembership": "2016-07-11",
+		"totalBooksCheckout": 4
+	},
+	{
+		"id": 61,
+		"status": 4,
+		"dateOfMembership": "2016-01-25",
+		"totalBooksCheckout": 1
+	},
+	{
+		"id": 62,
+		"status": 1,
+		"dateOfMembership": "2018-07-09",
+		"totalBooksCheckout": 0
+	},
+	{
+		"id": 63,
+		"status": 1,
+		"dateOfMembership": "2016-11-25",
+		"totalBooksCheckout": 3
+	},
+	{
+		"id": 64,
+		"status": 1,
+		"dateOfMembership": "2017-11-02",
+		"totalBooksCheckout": 2
+	},
+	{
+		"id": 65,
+		"status": 4,
+		"dateOfMembership": "2016-10-09",
+		"totalBooksCheckout": 0
+	},
+	{
+		"id": 66,
+		"status": 4,
+		"dateOfMembership": "2018-09-23",
+		"totalBooksCheckout": 4
+	},
+	{
+		"id": 67,
+		"status": 4,
+		"dateOfMembership": "2018-07-27",
+		"totalBooksCheckout": 5
+	},
+	{
+		"id": 68,
+		"status": 2,
+		"dateOfMembership": "2018-10-23",
+		"totalBooksCheckout": 2
+	},
+	{
+		"id": 69,
+		"status": 4,
+		"dateOfMembership": "2017-02-26",
+		"totalBooksCheckout": 2
+	},
+	{
+		"id": 70,
+		"status": 1,
+		"dateOfMembership": "2016-09-29",
+		"totalBooksCheckout": 0
+	},
+	{
+		"id": 71,
+		"status": 4,
+		"dateOfMembership": "2018-08-15",
+		"totalBooksCheckout": 4
+	},
+	{
+		"id": 72,
+		"status": 4,
+		"dateOfMembership": "2016-12-06",
+		"totalBooksCheckout": 5
+	},
+	{
+		"id": 73,
+		"status": 1,
+		"dateOfMembership": "2017-05-04",
+		"totalBooksCheckout": 1
+	},
+	{
+		"id": 74,
+		"status": 3,
+		"dateOfMembership": "2019-11-22",
+		"totalBooksCheckout": 3
+	},
+	{
+		"id": 75,
+		"status": 3,
+		"dateOfMembership": "2018-01-15",
+		"totalBooksCheckout": 5
+	},
+	{
+		"id": 76,
+		"status": 4,
+		"dateOfMembership": "2019-07-02",
+		"totalBooksCheckout": 3
+	},
+	{
+		"id": 77,
+		"status": 4,
+		"dateOfMembership": "2018-04-26",
+		"totalBooksCheckout": 4
+	},
+	{
+		"id": 78,
+		"status": 2,
+		"dateOfMembership": "2016-02-07",
+		"totalBooksCheckout": 2
+	},
+	{
+		"id": 79,
+		"status": 4,
+		"dateOfMembership": "2018-05-18",
+		"totalBooksCheckout": 2
+	},
+	{
+		"id": 80,
+		"status": 5,
+		"dateOfMembership": "2017-03-23",
+		"totalBooksCheckout": 4
+	},
+	{
+		"id": 81,
+		"status": 2,
+		"dateOfMembership": "2016-08-09",
+		"totalBooksCheckout": 0
+	},
+	{
+		"id": 82,
+		"status": 3,
+		"dateOfMembership": "2016-09-30",
+		"totalBooksCheckout": 1
+	},
+	{
+		"id": 83,
+		"status": 4,
+		"dateOfMembership": "2017-03-05",
+		"totalBooksCheckout": 1
+	},
+	{
+		"id": 84,
+		"status": 3,
+		"dateOfMembership": "2019-03-23",
+		"totalBooksCheckout": 0
+	},
+	{
+		"id": 85,
+		"status": 1,
+		"dateOfMembership": "2018-07-25",
+		"totalBooksCheckout": 1
+	},
+	{
+		"id": 86,
+		"status": 1,
+		"dateOfMembership": "2016-10-21",
+		"totalBooksCheckout": 4
+	},
+	{
+		"id": 87,
+		"status": 2,
+		"dateOfMembership": "2017-06-08",
+		"totalBooksCheckout": 1
+	},
+	{
+		"id": 88,
+		"status": 4,
+		"dateOfMembership": "2019-01-23",
+		"totalBooksCheckout": 3
+	},
+	{
+		"id": 89,
+		"status": 5,
+		"dateOfMembership": "2018-04-08",
+		"totalBooksCheckout": 1
+	},
+	{
+		"id": 90,
+		"status": 1,
+		"dateOfMembership": "2019-05-04",
+		"totalBooksCheckout": 0
+	},
+	{
+		"id": 91,
+		"status": 4,
+		"dateOfMembership": "2019-09-28",
+		"totalBooksCheckout": 1
+	},
+	{
+		"id": 92,
+		"status": 2,
+		"dateOfMembership": "2018-01-28",
+		"totalBooksCheckout": 5
+	},
+	{
+		"id": 93,
+		"status": 2,
+		"dateOfMembership": "2019-09-28",
+		"totalBooksCheckout": 5
+	},
+	{
+		"id": 94,
+		"status": 3,
+		"dateOfMembership": "2019-11-22",
+		"totalBooksCheckout": 1
+	},
+	{
+		"id": 95,
+		"status": 2,
+		"dateOfMembership": "2019-12-29",
+		"totalBooksCheckout": 2
+	},
+	{
+		"id": 96,
+		"status": 2,
+		"dateOfMembership": "2019-01-07",
+		"totalBooksCheckout": 5
+	},
+	{
+		"id": 97,
+		"status": 1,
+		"dateOfMembership": "2017-03-30",
+		"totalBooksCheckout": 1
+	},
+	{
+		"id": 98,
+		"status": 4,
+		"dateOfMembership": "2017-06-10",
+		"totalBooksCheckout": 5
+	},
+	{
+		"id": 99,
+		"status": 1,
+		"dateOfMembership": "2018-05-24",
+		"totalBooksCheckout": 0
+	},
+	{
+		"id": 100,
+		"status": 2,
+		"dateOfMembership": "2019-07-03",
+		"totalBooksCheckout": 1
+	}
+]
