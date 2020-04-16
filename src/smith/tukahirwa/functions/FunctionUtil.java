@@ -2,12 +2,14 @@ package smith.tukahirwa.functions;
 
 // Total amount in fines
 
+
 import smith.tukahirwa.core.Author;
 import smith.tukahirwa.core.BookItem;
 import smith.tukahirwa.core.BookStatus;
 import smith.tukahirwa.core.Member;
 import smith.tukahirwa.core.BookLending;
 import smith.tukahirwa.core.*;
+
 import java.time.LocalDate;
 
 import java.time.LocalDateTime;

@@ -247,7 +247,6 @@ public class Factory {
         RackList1.add(new Rack(200, "G-01-01", bookItemList.subList(0, 1)));
     }
 
-
     public static List<BookItem> testSpecificBookList = List.of(new BookItem("B-0098-SN-99","Gutten Bend- Auf", "Biology", "Pearson Publishers",
                     "GERMAN", 300, authorList.subList(1, 2), "LT-002-001BC",false,
                     LocalDate.of(2020,02,9), LocalDate.of(2020,02,19),
