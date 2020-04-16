@@ -37,6 +37,27 @@ public class Rack {
         this.books = books;
     }
     // implement further
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Rack)) return false;
+
+        Rack rack = (Rack) o;
+
+        if (number != rack.number) return false;
+        if (locationIdentifier != null ? !locationIdentifier.equals(rack.locationIdentifier) : rack.locationIdentifier != null)
+            return false;
+        return books != null ? books.equals(rack.books) : rack.books == null;
     }
+
+    @Override
+    public int hashCode() {
+        int result = number;
+        result = 31 * result + (locationIdentifier != null ? locationIdentifier.hashCode() : 0);
+        result = 31 * result + (books != null ? books.hashCode() : 0);
+        return result;
+    }
+}
 
 

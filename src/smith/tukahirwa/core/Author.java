@@ -26,4 +26,19 @@ public class Author extends Person{
                 "books=" + books +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Author)) return false;
+
+        Author author = (Author) o;
+
+        return books != null ? books.equals(author.books) : author.books == null;
+    }
+
+    @Override
+    public int hashCode() {
+        return books != null ? books.hashCode() : 0;
+    }
 }

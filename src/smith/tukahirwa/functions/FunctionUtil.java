@@ -8,9 +8,11 @@ import smith.tukahirwa.core.BookStatus;
 import smith.tukahirwa.core.Member;
 
 import java.time.LocalDate;
+import java.time.Month;
 import java.time.temporal.ChronoUnit;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -20,7 +22,7 @@ import static java.time.temporal.ChronoUnit.DAYS;
 public class FunctionUtil {
 
 
-    // Query (a) total Fines accumulated
+    // Query (1a) total amount accumulated in Fines
 
     public static final BiFunction<List<Member>, Double, Double> totalIncomeInFines =
            (mList, chargePerday)-> mList.stream()
@@ -40,15 +42,57 @@ public class FunctionUtil {
     //Query 23 - top K authors with books borrowed most
     public static final BiFunction<List<BookItem>, Integer, List<Author>> topKAuthors
             = (bookList, k) -> bookList.stream()
-            .peek(System.out::println)
+//            .peek(System.out::println)
             .filter(b->b.getIsReferenceOnly()==false)
-            .peek(System.out::println)
+//            .peek(System.out::println)
             .sorted(Comparator.comparing(BookItem::getCheckOutCounter))
             .flatMap(b->b.getAuthors().stream())
-            .peek(System.out::println)
+//            .peek(System.out::println)
             .limit(k)
-            .peek(System.out::println)
+//            .peek(System.out::println)
             .collect(Collectors.toList());
+
+    // Top K subjects - books borrowed most
+    public static final BiFunction<List<BookItem>, Integer, List<String>> topKSubjects
+            = (bList, k) -> bList.stream()
+            .filter(b->!b.getIsReferenceOnly())
+            .sorted(Comparator.comparing(BookItem::getCheckOutCounter))
+            .limit(k)
+            .map(BookItem::getSubject)
+            .collect(Collectors.toList());
+
+    // Top k borrowed books grouped per Subject
+    public static final BiFunction<List<BookItem>, Integer, Map<String, String>> topKPerCat
+            = (bList, k) -> bList.stream()
+            .filter(b->!b.getIsReferenceOnly())
+            .sorted(Comparator.comparing(BookItem::getCheckOutCounter))
+            .limit(k)
+            .collect(Collectors.toMap(BookItem::getSubject, BookItem::getTitle));
+
+    // Categories and number of books per category
+    public static final Function<List<BookItem>, Map<String, Long>> categoryNumbers =
+        (bList)-> bList.stream()
+            .collect(Collectors.groupingBy(BookItem::getSubject, Collectors.counting()));
+
+    // total amount of cash in Stocked books
+    public static Function<List<BookItem>, Double> stockValue
+            = (bList) -> bList.stream()
+            .mapToDouble(BookItem::getPrice)
+            .sum();
+
+    // Total number of ReferenceOnly vs CheckOut Books
+    public static Function<List<BookItem>, Map<Boolean, Long>> ReferenceAndCheckOutBooks
+            = (bList) -> bList.stream()
+            .collect(Collectors.partitioningBy(BookItem::getIsReferenceOnly, Collectors.counting()));
+
+    // average price of each books in a specific category
+    BiFunction<List<BookItem>, String, Double> averagePrice
+            =(bList, category) -> bList.stream()
+            .filter(b->b.getSubject()==category)
+            .mapToDouble(BookItem::getPrice)
+            .sum();
+
+
 
     // get past due date books
     public static final Function<List<BookItem>, List<BookItem>> pastDueDateBooks =

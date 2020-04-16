@@ -66,6 +66,10 @@ public class Member extends Account {
    this.incrementTotalBooksCheckedout();
    return true;
   }
+  public Address getAddress(){
+        return this.getPerson().getAddress();
+  }
+
 
   // implemet logic
 /*
