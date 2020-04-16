@@ -1,0 +1,125 @@
+[
+  {
+    "barcode": "LT-002-001BC",
+    "isReferenceOnly": false,
+    "borrowed": {
+      "year": 2020,
+      "month": 3,
+      "day": 1
+    },
+    "dueDate": {
+      "year": 2020,
+      "month": 3,
+      "day": 11
+    },
+    "returnDate": {
+      "year": 2020,
+      "month": 3,
+      "day": 21
+    },
+    "price": 230.0,
+    "format": "HARDCOVER",
+    "bookStatus": "AVAILABLE",
+    "dateOfPurchase": {
+      "year": 2019,
+      "month": 12,
+      "day": 1
+    },
+    "publicationDate": {
+      "year": 2019,
+      "month": 5,
+      "day": 1
+    },
+    "checkOutCounter": 5,
+    "ISBN": "B-0098-SN-98",
+    "title": "The Lion \u0026 the Jew",
+    "subject": "Literature",
+    "publisher": "MK Publishers Ltd",
+    "language": "ENGLISH",
+    "numberOfPages": 500,
+    "authors": [
+      {
+        "name": "Timothy Wangusa",
+        "email": "achebe@msn.net",
+        "phone": "785-646230"
+      }
+    ]
+  },
+  {
+    "barcode": "LT-002-001BC",
+    "isReferenceOnly": false,
+    "borrowed": {
+      "year": 2020,
+      "month": 2,
+      "day": 9
+    },
+    "dueDate": {
+      "year": 2020,
+      "month": 2,
+      "day": 19
+    },
+    "returnDate": {
+      "year": 2020,
+      "month": 2,
+      "day": 19
+    },
+    "price": 230.0,
+    "format": "HARDCOVER",
+    "bookStatus": "AVAILABLE",
+    "dateOfPurchase": {
+      "year": 2018,
+      "month": 12,
+      "day": 1
+    },
+    "publicationDate": {
+      "year": 2017,
+      "month": 5,
+      "day": 1
+    },
+    "checkOutCounter": 45,
+    "ISBN": "B-0098-SN-99",
+    "title": "Gutten Bend- Auf",
+    "subject": "Biology",
+    "publisher": "Pearson Publishers",
+    "language": "GERMAN",
+    "numberOfPages": 300,
+    "authors": [
+      {
+        "name": "Timothy Wangusa",
+        "email": "achebe@msn.net",
+        "phone": "785-646230"
+      }
+    ]
+  },
+  {
+    "barcode": "CR-002-01BC",
+    "isReferenceOnly": true,
+    "price": 230.0,
+    "format": "HARDCOVER",
+    "bookStatus": "AVAILABLE",
+    "dateOfPurchase": {
+      "year": 2018,
+      "month": 12,
+      "day": 1
+    },
+    "publicationDate": {
+      "year": 2017,
+      "month": 5,
+      "day": 1
+    },
+    "checkOutCounter": 0,
+    "ISBN": "GNB-0098-SN-99",
+    "title": "The Good News",
+    "subject": "Christianity",
+    "publisher": "Smartson Publishers",
+    "language": "ARABIC",
+    "numberOfPages": 8000,
+    "authors": [
+      {
+        "name": "Polpot King",
+        "email": "achebe@msn.net",
+        "phone": "785-646230"
+      }
+    ]
+  }
+]
