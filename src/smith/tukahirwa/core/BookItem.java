@@ -46,7 +46,6 @@ public class BookItem extends Book {
         super(ISBN, title, subject, publisher, language, numberOfPages, authors);
         this.barcode = barcode;
         this.isReferenceOnly = true;
-//        this.borrowed = borrowed; // - for Reference- Only books - no borrowing
         this.dueDate = dueDate;
         this.price = price;
         this.format = format;

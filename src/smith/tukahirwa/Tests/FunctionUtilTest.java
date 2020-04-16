@@ -21,7 +21,7 @@ public class FunctionUtilTest {
     public void setup(){
         MockitoAnnotations.initMocks(this);
 
-
+        /*  */
     }
 
     @Test
@@ -31,10 +31,10 @@ public class FunctionUtilTest {
     }
 //
 // Test 2 - to be cleaned up
-//    @Test
-//    public  void topKAuthorsTest() {
-//        assertEquals(testAuthors, FunctionUtil.topKAuthors.apply(factory.bookItemList, 2));
-//    }
+    @Test
+    public  void topKAuthorsTest() {
+        assertEquals(testAuthors, FunctionUtil.topKAuthors.apply(factory.bookItemList, 2));
+    }
 
 
 }
