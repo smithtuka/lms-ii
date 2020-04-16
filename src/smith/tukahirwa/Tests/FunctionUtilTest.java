@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.MockitoAnnotations;
+import org.testng.Assert;
 import smith.tukahirwa.functions.FunctionUtil;
 
 
@@ -29,23 +30,8 @@ public class FunctionUtilTest {
     Factory factory; // bean creation
 
     @Before
-    public void setup(){
+    public void setup() {
         MockitoAnnotations.initMocks(this);
-        /*  */
-    }
-
-
-    @Test
-    public  void getBookPerCategoryTest() {
-        assertEquals(1, FunctionUtil.allBooksPerCategory.apply(Factory.bookItemList, "Literature"));
-//        Assert.assertEquals(2, FunctionUtil.allBooksPerCategory.apply(factory.bookItemList, "Literature").long());
-    }
-
-//
-// Test 2 - to be cleaned up
-    @Test
-    public  void topKAuthorsTest() {
-        assertEquals(testAuthors, FunctionUtil.topKAuthors.apply(factory.bookItemList, 2));
 
     }
 
@@ -73,43 +59,47 @@ public class FunctionUtilTest {
         map.put("M-002", "Alice Tukahirwa");
         map.put("M-001", "Smith Tukahirwa");
         assertEquals(map, FunctionUtil.getMemberNotBorrow.apply(memberList));
-
-    @Test//1
-    public  void allBooksPerCategoryTest() {
+    }
+    @Test//st1
+    public void getBookPerCategoryTest() {
         assertEquals(1, FunctionUtil.allBooksPerCategory.apply(factory.bookItemList, "Literature"));
     }
-    @Test//1
-    public  void topKAuthorsTest() {
-        assertEquals(factory.testAuthors, FunctionUtil.topKAuthors.apply(factory.bookItemList, 2));
+    @Test//st2
+    public void allBooksPerCategoryTest () {
+            assertEquals(1, FunctionUtil.allBooksPerCategory.apply(Factory.bookItemList, "Literature"));
     }
-    @Test//1
-    public void  averagePriceTest(){
-        assertEquals(230, FunctionUtil.averagePrice.apply(factory.bookItemList, "Literature"));
+    @Test//st3
+    public void topKAuthorsTest () {
+            assertEquals(Factory.testAuthors, FunctionUtil.topKAuthors.apply(Factory.bookItemList, 2));
+    }
+    @Test//st4
+    public void averagePriceTest () {
+            assertEquals(230, FunctionUtil.averagePrice.apply(Factory.bookItemList, "Literature"));
 
     }
-    @Test//1
-    public void stockValueTest(){
-        assertEquals(690, FunctionUtil.stockValue.apply(factory.bookItemList));
-    }
-
-
-    @Test
-    public void pastDueDateBooksTest() {
-        assertEquals(new ArrayList<>(), FunctionUtil.pastDueDateBooks.apply(factory.bookItemList));
+    @Test//st5
+    public void stockValueTest () {
+            assertEquals(690, FunctionUtil.stockValue.apply(Factory.bookItemList));
     }
 
     @Test
-    public void getBookBarcodeTest() {
-        assertEquals(factory.bookItemList.subList(0, 1), FunctionUtil.getBookBarcode.apply(factory.memberList, "LT-002-001BC"));
+    public void pastDueDateBooksTest () {
+            assertEquals(new ArrayList<>(), FunctionUtil.pastDueDateBooks.apply(factory.bookItemList));
     }
 
     @Test
-    public void getNumberOfBorrowersPastDueTest() {
-        assertEquals(1, FunctionUtil.getNumberOfBorrowersPastDue.apply(factory.memberList));
+        public void getBookBarcodeTest () {
+            assertEquals(Factory.bookItemList.subList(0, 1), FunctionUtil.getBookBarcode.apply(Factory.memberList, "LT-002-001BC"));
     }
 
     @Test
-    public void getOldestBooksTest() {
-        assertEquals(new ArrayList<>(), FunctionUtil.getOldestBooks.apply(factory.bookItemList, 2017));
+        public void getNumberOfBorrowersPastDueTest () {
+            assertEquals(1, FunctionUtil.getNumberOfBorrowersPastDue.apply(Factory.memberList));
     }
-}
+
+    @Test
+        public void getOldestBooksTest () {
+            assertEquals(new ArrayList<>(), FunctionUtil.getOldestBooks.apply(Factory.bookItemList, 2017));
+    }
+    }
+

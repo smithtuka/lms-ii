@@ -22,7 +22,6 @@ public class FunctionUtil {
 
 
     // Query (1a) total amount accumulated in Fines
-
     public static final BiFunction<List<Member>, Double, Double> totalIncomeInFines =
             (mList, chargePerday) -> mList.stream()
                     .filter(m -> m.getBookItems().size() > 0)
@@ -136,7 +135,8 @@ public class FunctionUtil {
                     .sorted(Comparator.comparing(BookItem::getPublicationDate).reversed())
                     .map(BookItem::getTitle)
                     .collect(Collectors.toList());
-    // total amount of cash in Stocked books
+
+  /*  // total amount of cash in Stocked books
     public static Function<List<BookItem>, Double> stockValue
             = (bList) -> bList.stream()
             .mapToDouble(BookItem::getPrice)
@@ -150,5 +150,5 @@ public class FunctionUtil {
             = (bList, category) -> bList.stream()
             .filter(b -> b.getSubject() == category)
             .mapToDouble(BookItem::getPrice)
-            .sum();
+            .sum();*/
 }
