@@ -2,11 +2,13 @@ package smith.tukahirwa.functions;
 
 // Total amount in fines
 
+
 import smith.tukahirwa.core.Author;
 import smith.tukahirwa.core.BookItem;
 import smith.tukahirwa.core.BookStatus;
 import smith.tukahirwa.core.Member;
 import smith.tukahirwa.core.BookLending;
+import smith.tukahirwa.core.*;
 
 import java.time.LocalDate;
 
@@ -18,6 +20,7 @@ import java.util.*;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static java.time.temporal.ChronoUnit.DAYS;
 
@@ -200,4 +203,24 @@ public class FunctionUtil {
             .filter(b -> b.getSubject() == category)
             .mapToDouble(BookItem::getPrice)
             .sum();*/
+
+    //Query 27 - books whose authors start with p
+    public static  final BiFunction<BookItem, String, Boolean> startsP = ((bookItem, s) -> Stream.of(bookItem)
+            .flatMap(b -> b.getAuthors().stream()).flatMap(author -> Stream.of(author.getName()))
+            .anyMatch(name -> name.toLowerCase().startsWith(s.toLowerCase())));
+
+    public static  final Function<List<BookItem>,List<Book>>authorStartsWithP
+            =(bookItems) -> bookItems.stream()
+            .filter(b-> startsP.apply(b, "p"))
+            .collect(Collectors.toList());
+
+    //Query 28 - get rack number and the number of books in each rack
+    public static final Function<List<Rack>, Map<Integer, Long>> getNumOfBooksPerRack = (racks) -> racks.stream()
+            .collect(Collectors.toMap(Rack::getNumber, (rack) -> (long) rack.getBooks().size()));
+
+    //Query 30 - get books which are purchased on the date "day/month/year"
+    public static final BiFunction<List<BookItem>, LocalDate,List<Book>> bookGivenOnSpecificDate=
+            (bookItems, date)->bookItems.stream()
+            .filter(d->d.getDateOfPurchase().compareTo(date) == 0).collect(Collectors.toList());
+
 }

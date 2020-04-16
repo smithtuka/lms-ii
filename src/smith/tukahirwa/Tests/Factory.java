@@ -216,7 +216,7 @@ public class Factory {
 
     // Racks
    //static List <List<Rack>> RackList; - - might need it as List of Arrays/lists
-    static List<Rack> RackList;
+    public static List<Rack> RackList;
 
     static {
         RackList = new ArrayList<>();
@@ -239,8 +239,35 @@ public class Factory {
         RackList2.add(new Rack(110, "G-01-10", bookItemList2.subList(1, 5)));
     }
 
+    public static List<Rack> RackList1;
 
+    static {
+        RackList1 = new ArrayList<>();
+        RackList1.add(new Rack(100, "L-01-01", bookItemList.subList(0, 2)));
+        RackList1.add(new Rack(200, "G-01-01", bookItemList.subList(0, 1)));
+    }
 
+    public static List<BookItem> testSpecificBookList = List.of(new BookItem("B-0098-SN-99","Gutten Bend- Auf", "Biology", "Pearson Publishers",
+                    "GERMAN", 300, authorList.subList(1, 2), "LT-002-001BC",false,
+                    LocalDate.of(2020,02,9), LocalDate.of(2020,02,19),
+                    230, BookFormat.HARDCOVER, BookStatus.AVAILABLE,
+                    LocalDate.of(2018,12,01),
+                    LocalDate.of(2017,05,01), 45 ),
+
+            //reserveOnly
+            new BookItem("GNB-0098-SN-99","The Good News", "Christianity", "Smartson Publishers",
+                    "ARABIC", 8000, authorList.subList(2, 3), "CR-002-01BC",true,
+                    230, BookFormat.HARDCOVER,
+                    LocalDate.of(2018,12,01),
+                    LocalDate.of(2017,05,01) ));
+
+    public static List<BookItem> testSpecificBookListStartsP = List.of(
+            new BookItem("GNB-0098-SN-99","The Good News", "Christianity", "Smartson Publishers",
+                    "ARABIC", 8000, authorList.subList(2, 3), "CR-002-01BC",true,
+                    230, BookFormat.HARDCOVER,
+                    LocalDate.of(2018,12,01),
+                    LocalDate.of(2017,05,01) )
+    );
 
 
 }
