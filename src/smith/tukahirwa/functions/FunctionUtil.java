@@ -85,8 +85,8 @@ public class FunctionUtil {
             = (bList) -> bList.stream()
             .collect(Collectors.partitioningBy(BookItem::getIsReferenceOnly, Collectors.counting()));
 
-    // average price of each books in a specific category
-    BiFunction<List<BookItem>, String, Double> averagePrice
+    // average price of books in a specific category
+   public static final BiFunction<List<BookItem>, String, Double> averagePrice
             =(bList, category) -> bList.stream()
             .filter(b->b.getSubject()==category)
             .mapToDouble(BookItem::getPrice)
