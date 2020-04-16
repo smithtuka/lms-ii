@@ -6,8 +6,11 @@ import org.mockito.InjectMocks;
 import org.mockito.MockitoAnnotations;
 import smith.tukahirwa.functions.FunctionUtil;
 
+
+import java.util.ArrayList;
+
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static smith.tukahirwa.Tests.Factory.testAuthors;
 
 public class FunctionUtilTest {
 
@@ -27,7 +30,7 @@ public class FunctionUtilTest {
     }
     @Test//1
     public  void topKAuthorsTest() {
-        assertEquals(testAuthors, FunctionUtil.topKAuthors.apply(factory.bookItemList, 2));
+        assertEquals(factory.testAuthors, FunctionUtil.topKAuthors.apply(factory.bookItemList, 2));
     }
     @Test//1
     public void  averagePriceTest(){
@@ -39,5 +42,23 @@ public class FunctionUtilTest {
     }
 
 
+    @Test
+    public void pastDueDateBooksTest() {
+        assertEquals(new ArrayList<>(), FunctionUtil.pastDueDateBooks.apply(factory.bookItemList));
+    }
 
+    @Test
+    public void getBookBarcodeTest() {
+        assertEquals(factory.bookItemList.subList(0, 1), FunctionUtil.getBookBarcode.apply(factory.memberList, "LT-002-001BC"));
+    }
+
+    @Test
+    public void getNumberOfBorrowersPastDueTest() {
+        assertEquals(1, FunctionUtil.getNumberOfBorrowersPastDue.apply(factory.memberList));
+    }
+
+    @Test
+    public void getOldestBooksTest() {
+        assertEquals(new ArrayList<>(), FunctionUtil.getOldestBooks.apply(factory.bookItemList, 2017));
+    }
 }
