@@ -51,4 +51,11 @@ public abstract class Book {
     public List<Author> getAuthors() {
         return authors;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        Book book = (Book) obj;
+        return this.getTitle().equals(book.getTitle());
+    }
+
 }
