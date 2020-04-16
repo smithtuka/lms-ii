@@ -18,7 +18,11 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
+import java.time.LocalDate;
+
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 import static smith.tukahirwa.Tests.Factory.*;
 
@@ -64,6 +68,7 @@ public class FunctionUtilTest {
     public void getBookPerCategoryTest() {
         assertEquals(1, FunctionUtil.allBooksPerCategory.apply(factory.bookItemList, "Literature"));
     }
+
     @Test//st2
     public void allBooksPerCategoryTest () {
             assertEquals(1, FunctionUtil.allBooksPerCategory.apply(Factory.bookItemList, "Literature"));
@@ -74,9 +79,34 @@ public class FunctionUtilTest {
     }
     @Test//st4
     public void averagePriceTest () {
-            assertEquals(230, FunctionUtil.averagePrice.apply(Factory.bookItemList, "Literature"));
-
+        assertEquals(230, FunctionUtil.averagePrice.apply(Factory.bookItemList, "Literature"));
     }
+
+    @Test
+    public void bookGivenOnSpecificDate() {
+        LocalDate ld = LocalDate.of(2018,12, 1);
+        assertArrayEquals(testSpecificBookList.toArray(), FunctionUtil.bookGivenOnSpecificDate.apply(bookItemList, ld).toArray());
+    }
+
+    @Test
+    public void authorStartsWithP() {
+        assertArrayEquals(testSpecificBookListStartsP.toArray(), FunctionUtil.authorStartsWithP.apply(bookItemList).toArray());
+    }
+
+    @Test
+    public void getNumOfBooksPerRack() {
+        Map<Integer, Long> map = new HashMap<>();
+        map.put(100, (long) 2);
+        map.put(200, (long) 1);
+        assertEquals(map, FunctionUtil.getNumOfBooksPerRack.apply(RackList1));
+    }
+//
+// Test 2 - to be cleaned up
+//    @Test
+//    public  void topKAuthorsTest() {
+//        assertEquals(testAuthors, FunctionUtil.topKAuthors.apply(factory.bookItemList, 2));
+//    }
+
     @Test//st5
     public void stockValueTest () {
             assertEquals(690, FunctionUtil.stockValue.apply(Factory.bookItemList));
