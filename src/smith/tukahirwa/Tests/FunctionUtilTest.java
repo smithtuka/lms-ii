@@ -6,6 +6,8 @@ import org.mockito.InjectMocks;
 import org.mockito.MockitoAnnotations;
 
 import org.testng.Assert;
+import smith.tukahirwa.core.AccountStatus;
+import smith.tukahirwa.core.Member;
 import smith.tukahirwa.functions.FunctionUtil;
 
 

@@ -188,6 +188,24 @@ public class FunctionUtil {
                     .map(BookItem::getTitle)
                     .collect(Collectors.toList());
 
+    // Query 11: The most frequent borrower
+    public static final Function< List<Member>, Optional<Member>> mostFrequentBorrower
+            = memberList -> memberList.stream()
+            .sorted((m1, m2) -> m2.getTotalBooksCheckedout() - m1.getTotalBooksCheckedout()).findFirst();
+
+    // Query 12: titles that have been borrowed to a specific member
+    public static final Function< List<Member>, List<String>> infoAboutBorrowedBook
+            = memberList -> memberList.stream()
+            .flatMap(m->m.getBookItems().stream())
+            .map(BookItem::getTitle)
+            .collect(Collectors.toList());
+
+    //Query 13: The list of blacklist members
+    public static final Function< List<Member>, List<Member>> blacklistedMember
+            = memberList -> memberList.stream()
+            .filter(m -> m.getStatus().equals(AccountStatus.BLACKLISTED))
+            .collect(Collectors.toList());
+
   /*  // total amount of cash in Stocked books
     public static Function<List<BookItem>, Double> stockValue
             = (bList) -> bList.stream()
