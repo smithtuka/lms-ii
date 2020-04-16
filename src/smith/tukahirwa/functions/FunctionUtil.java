@@ -9,13 +9,11 @@ import smith.tukahirwa.core.Member;
 import smith.tukahirwa.core.BookLending;
 
 import java.time.LocalDate;
-import java.time.temporal.ChronoUnit;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
+
 import java.time.LocalDateTime;
 import java.time.Month;
 import java.time.YearMonth;
+import java.time.temporal.ChronoUnit;
 import java.util.*;
 import java.util.function.BiFunction;
 import java.util.function.Function;
@@ -70,7 +68,9 @@ public class FunctionUtil {
 
 
 
-    // Query (1a) total amount accumulated in Fines
+
+    // Query (a) total Fines accumulated
+
     public static final BiFunction<List<Member>, Double, Double> totalIncomeInFines =
             (mList, chargePerday) -> mList.stream()
                     .filter(m -> m.getBookItems().size() > 0)

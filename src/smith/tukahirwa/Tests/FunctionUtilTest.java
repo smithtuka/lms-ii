@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.MockitoAnnotations;
+
 import org.testng.Assert;
 import smith.tukahirwa.functions.FunctionUtil;
 
@@ -95,6 +96,7 @@ public class FunctionUtilTest {
 //        assertEquals(new LinkedHashMap<Month, Integer>(){{put(LocalDate.of(2018,04,01).getMonth(), 2);}},
 //                FunctionUtil.topMonthCount.apply(factory.bookItemList.subList(0, 2)));
 //    }
+
 
     @Test
     public void getMemberNotBorrow() {
