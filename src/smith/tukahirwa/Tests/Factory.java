@@ -14,21 +14,6 @@ public class Factory {
     public static void main(String[] args) throws FileNotFoundException {
 
 
-        // Librarians
-
-
-        // Authors
-
-
-        // List of Members
-
-        // Racks
-
-        // Address
-
-
-        //BookItems
-
     }
 
     // Addresses
@@ -100,7 +85,6 @@ public class Factory {
     // Members
 
     public static List<Member> memberList = List.of(
-
             // some with no books, others late returns, others, cancelled status, others, in same address, some new members,
             new Member("M-001", AccountStatus.ACTIVE, personList.get(0), LocalDate.of(2020,04,10),  new ArrayList<BookItem>()),
             new Member("M-002", AccountStatus.ACTIVE, personList.get(1), LocalDate.of(2020,04,11), bookItemList.subList(0,0)),
