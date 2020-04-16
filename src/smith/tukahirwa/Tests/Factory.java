@@ -1,10 +1,9 @@
 package smith.tukahirwa.Tests;
 
-import com.google.gson.Gson;
+//import com.google.gson.Gson;
 import smith.tukahirwa.core.*;
 
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
