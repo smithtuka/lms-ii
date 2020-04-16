@@ -115,14 +115,14 @@ public class Factory {
     public static List<BookItem> bookItemList = List.of(
       new BookItem("B-0098-SN-98","The Lion & the Jew", "Literature", "MK Publishers Ltd",
               "ENGLISH", 500, authorList.subList(1, 2), "LT-002-001BC",false,
-              LocalDate.of(2020,03,01), LocalDate.of(2020,03,21),
+              LocalDate.of(2018,04,01), LocalDate.of(2020,03,21),
               230, BookFormat.HARDCOVER, BookStatus.AVAILABLE,
               LocalDate.of(2019,12,01),
               LocalDate.of(2019,05,01), 5 ),
 
             new BookItem("B-0098-SN-99","Gutten Bend- Auf", "Biology", "Pearson Publishers",
                     "GERMAN", 300, authorList.subList(1, 2), "LT-002-001BC",false,
-                    LocalDate.of(2020,02,9), LocalDate.of(2020,02,19),
+                    LocalDate.of(2020,04,9), LocalDate.of(2020,02,19),
                     230, BookFormat.HARDCOVER, BookStatus.AVAILABLE,
                     LocalDate.of(2018,12,01),
                     LocalDate.of(2017,05,01), 45 ),
